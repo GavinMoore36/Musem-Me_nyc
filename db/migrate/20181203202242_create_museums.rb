@@ -4,7 +4,7 @@ class CreateMuseums < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :address
       t.string :borough
-      t.float :cooridinate_x
+      t.float :coordinate_x
       t.float :coordinate_y
       t.string :url
       t.string :zip

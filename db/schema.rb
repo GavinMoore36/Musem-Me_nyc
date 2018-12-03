@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_202242) do
     t.string "title"
     t.string "address"
     t.string "borough"
-    t.float "cooridinate_x"
+    t.float "coordinate_x"
     t.float "coordinate_y"
     t.string "url"
     t.string "zip"
