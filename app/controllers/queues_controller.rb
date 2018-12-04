@@ -1,4 +1,4 @@
-class QueueController < ApplicationController
+class QueuesController < ApplicationController
 
   def update
     flash[:message] = "You added #{params[:museum_title]} to your queue."
