@@ -1,7 +1,14 @@
-<h1>Museums at Your Choosing</h1>
+<h1>Museum Index</h1>
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+<div><%= button_to "Queue", queues_index_path %></div>
 
 <ol>
 <% @museums.each do |museum| %>
 <li> <%= link_to museum.title, museum %> </li> <br>
+<p><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: museum.id, museum_title: museum.title}} %></p>
 <% end %>
 </ol>
