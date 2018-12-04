@@ -17,8 +17,3 @@ def seed_museum_data
     Museum.create(title: key["name"], address:key["adress1"], borough:key["city"], coordinate_x:key["the_geom"]["coordinates"][0], coordinate_y:key["the_geom"]["coordinates"][1], url:key["url"], zip:key["zip"], phone:key["tel"] )
   end
 end
-
-seed_museum_data
-
-
-  # Museum.create(title: key["name"], address:key["adress1"], borough:key["city"], coordinate_x:key["the_geom"]["coordinates"][0], coordinate_y:key["the_geom"]["coordinates"][1], url:key["url"], zip:key["zip"], phone:key["tel"] )
