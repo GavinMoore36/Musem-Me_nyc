@@ -1,0 +1,7 @@
+<h1>Museums at Your Choosing</h1>
+
+<ol>
+<% @museums.each do |museum| %>
+<li> <%= button_to museum.title, museum_path(museum) %> </li> <br>
+<% end %>
+</ol>
