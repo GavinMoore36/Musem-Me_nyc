@@ -15,3 +15,7 @@ class MuseumsController < ApplicationController
   end
 
 end
+#Museum.distinct.pluck
+#-Array of Boroughs
+#Museum.all.where(borough: "")
+#-Array of museums in a Borough
