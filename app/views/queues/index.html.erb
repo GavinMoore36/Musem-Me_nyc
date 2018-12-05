@@ -1,9 +1,9 @@
 <h1>Museum Queue</h1>
 
-<ol>
+<ul>
   <% if @queue_museums %>
   <% @queue_museums.each do |museum| %>
- <li><%= museum.title %></li>
+ <p><%= link_to museum.title, museum %></p>
     <% end %>
   <% end %>
-</ol>
+</ul>
