@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Museum Index</h1>
 
 <% if flash[:message] %>
@@ -12,3 +13,5 @@
 <p><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: museum.id, museum_title: museum.title}} %></p>
 <% end %>
 </ol>
+
+</div>

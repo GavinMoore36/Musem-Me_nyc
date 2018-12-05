@@ -14,6 +14,8 @@ class MuseumsController < ApplicationController
     @museum = Museum.find(params[:id])
   end
 
+
+
 end
 #Museum.distinct.pluck
 #-Array of Boroughs
