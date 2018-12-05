@@ -3,7 +3,7 @@
 <ol>
   <% if @queue_museums %>
   <% @queue_museums.each do |museum| %>
- <li><%= museum.title %></li>
+ <li><%= link_to museum.title, museum %></li>
     <% end %>
   <% end %>
 </ol>
