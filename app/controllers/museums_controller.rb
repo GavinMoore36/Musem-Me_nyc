@@ -14,4 +14,6 @@ class MuseumsController < ApplicationController
     @museum = Museum.find(params[:id])
   end
 
+
+
 end

@@ -10,26 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_175627) do
+ActiveRecord::Schema.define(version: 2018_12_05_171038) do
+
+  create_table "boroughs", force: :cascade do |t|
+    t.string "name"
+  end
 
   create_table "museums", force: :cascade do |t|
     t.string "title"
     t.string "address"
-    t.string "borough"
     t.float "coordinate_x"
     t.float "coordinate_y"
     t.string "url"
     t.string "zip"
     t.string "phone"
+    t.integer "borough_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["borough_id"], name: "index_museums_on_borough_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "borough"
+    t.integer "borough_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["borough_id"], name: "index_users_on_borough_id"
   end
 
 end
