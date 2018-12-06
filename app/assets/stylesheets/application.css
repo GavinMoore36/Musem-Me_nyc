@@ -14,61 +14,88 @@
  *= require_self
  */
 
- /* .queue_button {
-   background-color: #008CBA;
-   border-radius: 12px;
-   border: none;
-   color: blue;
-   padding: 5px 5px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
-   margin: 4px 2px;
-   cursor: pointer;
- } */
+.borough_button {
+  display: block;
+  height: 40px;
+  width: 15em;
+  top: 300px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  border-radius: 50px;
+  font-family: nevis;
+  font-size: 3vh;
+  cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
+}
 
- .search_form {
+ .show_queue_button {
    display: inline-block;
-   position: relative;
-   float: right;
-   border-radius: 12px;
+   position: absolute;
+   float: left;
+   left: 250px;
+   top: 100px;
+   border-radius: 50px;
    padding: 1rem 2rem;
-   margin: 0;
    background: #0069ed;
+   color: white;
+   font-family: nevis;
+   font-size: 4vh;
+   cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
+   text-align: center;
+   transition: background 250ms ease-in-out, transform 150ms ease;
+ }
+
+ .show_search_form {
+   display: inline-block;
+   position: absolute;
+   float: right;
+   right: 150px;
+   top: 100px;
+   border-radius: 50px;
+   padding: 1rem 2rem;
+   background: #0069ed;
+   font-size: 2vh;
    font-family: nevis;
    color: white;
-   font-size: 5vh;
-
+   cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
+   font-size: 3vh;
+   line-height: 40px;
+   transition: background 250ms ease-in-out, transform 150ms ease;
  }
 
- .queue_button {
-     display: inline-block;
-     position: relative;
-     left: 100px;
-     top: 50px;
-     border-radius: 12px;
-     padding: 1rem 2rem;
-     margin: 0;
-     background: #0069ed;
-     color: white;
-     font-family: nevis;
-     font-size: 5vh;
-     cursor: pointer;
-     text-align: center;
-     transition: background 250ms ease-in-out, transform 150ms ease;
+ .borough_button:hover {
+   background: indigo;
+   color: white;
  }
 
- .queue_button:hover,
+ .show_queue_button:hover,
  button:focus {
      background: pink;
  }
 
- .queue_button:focus {
+ .show_queue_button:focus {
      outline: 1px solid #fff;
      outline-offset: -4px;
  }
 
- .queue_button:active {
+ .show_queue_button:active {
+     transform: scale(0.99);
+ }
+
+ .show_search_form:hover,
+ button:focus {
+     background: pink;
+ }
+
+ .show_search_form:focus {
+     outline: 1px solid #fff;
+     outline-offset: -4px;
+ }
+
+ .show_search_form:active {
      transform: scale(0.99);
  }
