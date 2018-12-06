@@ -12,4 +12,13 @@ class ApplicationController < ActionController::Base
     @queue_museums = Museum.find(queue)
   end
 
+  def welcome
+    @museum = Museum.search(params[:search])
+  end
+
+  def museum_params
+    params.require(:museum).permit(:title, :address, :coordinate_x, :coordinate_y, :url, :zip, :phone, :borough_id, :search)
+  end
+
+
 end
