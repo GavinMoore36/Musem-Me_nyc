@@ -1,4 +1,11 @@
 <div class="container">
+
+  <%= form_tag(search_path) do %>
+  <%= label_tag(:title, "Search for a Museum") %>
+    <%= text_field_tag :title, params[:title] %>
+    <%= submit_tag 'Search' %>
+  <% end %>
+  
 <h1>Museum Index</h1>
 
 <% if flash[:message] %>

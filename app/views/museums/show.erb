@@ -1,6 +1,10 @@
+<div><%= button_to "Queue", queues_index_path %></div>
+
 <h1><%= @museum.title %></h1><br>
 
 <p><%= @museum.address %></p>
 <p><%= @museum.zip.split(".")[0] %></p>
 <p><%= link_to @museum.url, @museum.url%></p>
 <p><%= @museum.phone %></p>
+
+<p><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: @museum.id, museum_title: @museum.title}} %></p>

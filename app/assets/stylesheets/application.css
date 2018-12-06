@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+
+ /* .queue_button {
+   background-color: #008CBA;
+   border-radius: 12px;
+   border: none;
+   color: blue;
+   padding: 5px 5px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+ } */
+
+ .search_form {
+   display: inline-block;
+   position: relative;
+   float: right;
+   
+ }
+
+ .queue_button {
+     display: inline-block;
+     position: relative;
+     left: 100px;
+     top: 50px;
+     border-radius: 12px;
+     padding: 1rem 2rem;
+     margin: 0;
+     background: #0069ed;
+     color: white;
+     font-family: nevis;
+     font-size: 5vh;
+     cursor: pointer;
+     text-align: center;
+     transition: background 250ms ease-in-out, transform 150ms ease;
+ }
+
+ .queue_button:hover,
+ button:focus {
+     background: pink;
+ }
+
+ .queue_button:focus {
+     outline: 1px solid #fff;
+     outline-offset: -4px;
+ }
+
+ .queue_button:active {
+     transform: scale(0.99);
+ }

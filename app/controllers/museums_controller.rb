@@ -6,7 +6,9 @@ class MuseumsController < ApplicationController
   end
 
   def show
+    
   end
+
   def search
       @museum = Museum.search(params[:title])
     if @museum

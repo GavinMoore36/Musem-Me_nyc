@@ -10,4 +10,9 @@ class QueuesController < ApplicationController
     display_queue
   end
 
+  def destroy
+    queue.clear
+    redirect_to home_index_path
+  end
+
 end
