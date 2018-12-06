@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def welcome
-    @museum = Museum.search(params[:search])
+    # @museums = Museum.search(params[:title])
   end
 
   def museum_params

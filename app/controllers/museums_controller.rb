@@ -8,7 +8,8 @@ class MuseumsController < ApplicationController
   def show
   end
   def search
-    if Museum.search(params[:search]) == @museum
+      @museum = Museum.search(params[:title])
+    if @museum
       redirect_to museum_path(@museum)
     else
       redirect_to home_index_path

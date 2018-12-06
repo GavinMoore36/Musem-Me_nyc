@@ -22,10 +22,3 @@ def seed_museum_data
 end
 
 seed_museum_data
-
-#
-# User.create(name: "Gavin", borough: "New York")
-# User.create(name: "Gabe", borough: "Brooklyn")
-# User.create(name: "David", borough: "Bronx")
-# User.create(name: "Connor", borough: "Staten Island")
-# User.create(name: "Dude", borough: "Queens")

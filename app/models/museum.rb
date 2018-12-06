@@ -1,11 +1,9 @@
 class Museum < ApplicationRecord
   belongs_to :borough
 
-  def self.search(search)
-    if search
-      where('title LIKE ?', "%#{search}%")
-    else
-      all
+  def self.search(title)
+      Museum.all.find do |mus|
+        mus.title.include?(title)
     end
   end
 

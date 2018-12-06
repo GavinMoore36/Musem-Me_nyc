@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :users, only:[:show, :new, :create, :edit, :update]
   resources :museums, only:[:index, :show]
   resources :boroughs, only:[:index, :show]
   get '/', to: 'application#welcome', as: "home_index"
