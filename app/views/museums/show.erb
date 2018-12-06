@@ -4,3 +4,5 @@
 <p><%= @museum.zip.split(".")[0] %></p>
 <p><%= link_to @museum.url, @museum.url%></p>
 <p><%= @museum.phone %></p>
+<br>
+<%= button_to "Home", home_index_path, method: :get %>
