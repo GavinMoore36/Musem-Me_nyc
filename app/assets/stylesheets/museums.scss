@@ -2,8 +2,75 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.index-svg-class {
+  display: block;
+  height: 8vh;
+  top: 50px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.index_home_button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 200px;
+  background: black;
+  color: white;
+  border-radius: 50px;
+  font-family: nevis;
+  font-size: 3vh;
+  cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
+}
 
 h1 {
   font-family: nevis;
+  font-size: 5vh;
+}
+
+p {
+  font-family: josefin sans;
+  font-size: 3vh;
+}
+
+.error_container {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  margin-left: 30%;
+}
+
+.museum_container {
+  position: relative;
+
+}
+
+.index_add_button {
+  text-align: center;
+  background: red;
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+.museum_profile {
+  position: fixed;
+  display: absolute;
+  text-align: center;
+  left: 30%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 200px;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.index_container {
+  position: relative;
+  text-align: center;
+  top: 150px;
 }

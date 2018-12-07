@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   post '/queues', to: 'queues#index', as: "queues_index"
   get '/queues', to: 'queues#index', as: "queues_index_refresh"
   patch '/queue', to: 'queues#update', as: "add_museum_to_queue"
+
 end

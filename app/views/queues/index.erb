@@ -1,11 +1,15 @@
 <h1>Museum Queue</h1>
 
-<ul>
-  <% if @queue_museums %>
-  <% @queue_museums.each do |museum| %>
- <p><%= link_to museum.title, museum %></p>
-    <% end %>
-  <% end %>
-</ul>
+<%= button_to "Back to Home", home_index_path, method: :get, class: 'index_home_button' %>
 
-<%= button_to "delete", queues_delete_path, :method => :delete %>
+<div class="">
+  <ul>
+    <% if @queue_museums %>
+    <% @queue_museums.each do |museum| %>
+   <p><%= link_to museum.title, museum %></p>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<%= button_to "delete", queues_delete_path, :method => :delete, class: 'delete_button' %>

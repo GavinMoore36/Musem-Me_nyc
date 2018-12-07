@@ -1,27 +1,31 @@
-<div class="container">
 
+<div class="show_search_form">
   <%= form_tag(search_path) do %>
   <%= label_tag(:title, "Search for a Museum") %>
     <%= text_field_tag :title, params[:title] %>
     <%= submit_tag 'Search' %>
   <% end %>
-  
-<h1>Museum Index</h1>
-
-<% if flash[:message] %>
-<%= flash[:message] %>
-<% end %>
-
-<div><%= button_to "Queue", queues_index_path %></div>
-
-<ol>
-<% @museums.each do |museum| %>
-<li> <%= link_to museum.title, museum %> </li> <br>
-<p><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: museum.id, museum_title: museum.title}} %></p>
-<% end %>
-</ol>
-
 </div>
 
 
-<%= button_to "Back to Home", home_index_path, method: :get %>
+  <%= inline_svg "museume.svg", class: 'index-svg-class' %>
+
+<div><%= button_to "Queue", queues_index_path, class: 'show_queue_button' %></div>
+
+<div class="error_container">
+  <% if flash[:message] %>
+  <p><%= flash[:message] %></p>
+  <% end %>
+</div>
+
+
+<div class="index_container">
+  <ul>
+  <% @museums.each do |museum| %>
+  <ul> <%= button_to museum.title, museum, method: :get, class: 'index_button' %> </ul> <br>
+  <div class= "index_add_button"><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: museum.id, museum_title: museum.title}} %></div><br>
+  <% end %>
+  </ul>
+</div>
+
+<%= button_to "Back to Home", home_index_path, method: :get, class: 'index_home_button' %>
