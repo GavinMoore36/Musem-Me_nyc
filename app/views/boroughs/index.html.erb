@@ -1,9 +1,10 @@
 
-
-<ol>
-  <% @boroughs.each do |borough| %>
-  <ul><%= link_to borough.name, borough %></ul><br>
-  <% end %>
-</ol>
-<br>
-<%= button_to "Back to Home", home_index_path, method: :get %>
+<div class="borough_container">
+  <ol>
+    <% @boroughs.each do |borough| %>
+    <ul><%= button_to borough.name, borough, method: :get, class: 'index_borough_button' %></ul><br>
+    <% end %>
+  </ol>
+  <br>
+  <%= button_to "Back to Home", home_index_path, method: :get, class: 'borough_home_button' %>
+</div>

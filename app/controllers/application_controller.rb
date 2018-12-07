@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def display_queue
+
     @queue_museums = Museum.find(queue)
   end
 
