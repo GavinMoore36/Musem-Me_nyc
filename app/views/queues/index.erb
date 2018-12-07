@@ -1,5 +1,7 @@
 <h1>Museum Queue</h1>
 
+<%= button_to "Back to Home", home_index_path, method: :get, class: 'index_home_button' %>
+
 <div class="">
   <ul>
     <% if @queue_museums %>
@@ -10,4 +12,4 @@
   </ul>
 </div>
 
-<%= button_to "delete", queues_delete_path, :method => :delete %>
+<%= button_to "delete", queues_delete_path, :method => :delete, class: 'delete_button' %>

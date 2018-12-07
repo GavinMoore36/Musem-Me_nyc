@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ .delete_button {
+
+ }
+
 .borough_button {
   display: block;
   height: 40px;
@@ -32,8 +36,20 @@
   cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
 }
 
-.index_button {
-
+.delete_button {
+  position: relative;
+  height: 40px;
+  width: 15em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  border-radius: 50px;
+  font-family: nevis;
+  font-size: 3vh;
+  cursor: url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto;
 }
 
  .show_queue_button {

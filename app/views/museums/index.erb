@@ -8,21 +8,24 @@
 </div>
 
 
-<h1>Museum Index</h1>
+  <%= inline_svg "museume.svg", class: 'index-svg-class' %>
 
-<% if flash[:message] %>
-<%= flash[:message] %>
-<% end %>
+<div><%= button_to "Queue", queues_index_path, class: 'show_queue_button' %></div>
 
-<div><%= button_to "Queue", queues_index_path %></div>
-
-<ul>
-<% @museums.each do |museum| %>
-<ul> <%= button_to museum.title, museum, method: :get, class: 'index_button' %> </ul> <br>
-<div class= "index_add_button"><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: museum.id, museum_title: museum.title}} %></div>
-<% end %>
-</ul>
+<div class="error_container">
+  <% if flash[:message] %>
+  <p><%= flash[:message] %></p>
+  <% end %>
+</div>
 
 
+<div class="index_container">
+  <ul>
+  <% @museums.each do |museum| %>
+  <ul> <%= button_to museum.title, museum, method: :get, class: 'index_button' %> </ul> <br>
+  <div class= "index_add_button"><%= button_to "Add Museum", add_museum_to_queue_path, {method: :patch, params: {museum_id: museum.id, museum_title: museum.title}} %></div><br>
+  <% end %>
+  </ul>
+</div>
 
-<%= button_to "Back to Home", home_index_path, method: :get %>
+<%= button_to "Back to Home", home_index_path, method: :get, class: 'index_home_button' %>
